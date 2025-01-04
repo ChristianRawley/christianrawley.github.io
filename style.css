@@ -59,14 +59,14 @@ body {
     padding: 16px;
 }
 
-.project {
+.entry {
     background-color: #344966;
     color: #F0F4EF;
     border-radius: 12px;
     margin-top: 16px;
 }
 
-.project .tags {
+.entry .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -78,17 +78,22 @@ body {
     border-radius: 4px;
     color: #000;
     padding: 4px;
+    transition: 0.3s;
 }
 
-.project h2, .project h3 {
+.tags p:hover {
+    background-color: #F0F4EF;
+}
+
+.entry h2, .entry h3 {
     padding: 16px;
 }
 
-.project h3 {
+.entry h3 {
     font-weight: 100;
 }
 
-.project a {
+.entry a {
     display: inline-block;
     color: #F0F4EF;
     background-color: #0D1821;
@@ -104,7 +109,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.project a:hover {
+.entry a:hover {
     background-color: #222f41;
 }
 
