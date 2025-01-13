@@ -66,6 +66,15 @@ body {
     margin-top: 16px;
 }
 
+p, ul {
+    font-size: 20px;
+    color: #0D1821;
+}
+
+a {
+    color: #23669e; 
+}
+
 .entry .tags {
     display: flex;
     flex-wrap: wrap;
