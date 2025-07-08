@@ -1,67 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Rawley | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<html data-bs-theme="dark">
+    <head>
+        <title>Christian Rawley | Portfolio</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
 
-<body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <img src="src/pfp.jpg">
-        <h1>Christian Rawley</h1>
-        <h2 style="padding-left: 4px; padding-right: 4px">Incoming Full-Stack Software Developer Intern at Simmons Foods (Summer 2025), studying Computer Science and Mathematics at the University of Arkansas at Fort Smith.</h2>
-        <h2><a href="mailto: christian@cerawley.com" target="_blank" style="color: white">christian@cerawley.com</a></h2>
-        <h2><a href="https://www.github.com/ChristianRawley" target="_blank" style="color: white">GitHub</a></h2>
-        <h2><a href="https://www.linkedin.com/in/christian-rawley" target="_blank" style="color: white">LinkedIn</a></h2>
-        <h2><a href="https://www.x.com/ChristianRawley" target="_blank" style="color: white">X (Twitter)</a></h2>
-    </div>
-  
-    <!-- Main -->
-    <div class="main">
-
-        <!-- Projects -->
-        <h1>Projects</h1>
-        <div class="entry">
-            <h2>Bullet Rush</h2>
-            <div class="tags">
-                <p>Java</p>
-                <p>Java Swing</p>
+    <body class="bg-body-tertiary">
+        <main>
+        <div class="container-fluid">
+            <div class="row p-2">
+                <div class="col-12 col-lg-3 p-2">
+                    <div class="card">
+                        <img src="banner.jpg" class="card-img-top" alt="">
+                        <div class="card-body p-3">  
+                            <h5 class="card-title">Christian Rawley</h5>
+                            <p class="card-text text-muted">Hi, I’m Christian Rawley, a computer science student at UAFS. I’m interested in artificial intelligence and building applications. I enjoy seeing my code come together into a working program. I’ve completed one internship and hope to become a software engineer in the future.</p>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Contact Me
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="mailto:christian@cerawley.com" class="link-body-emphasis text-decoration-none" target="_blank"><i class="bi bi-envelope me-2"></i>christian@cerawley.com</a></li>
+                            <li class="list-group-item"><a href="mailto: crawle00@uafs.edu" class="link-body-emphasis text-decoration-none" target="_blank"><i class="bi bi-envelope me-2"></i>crawle00@uafs.edu</a></li>
+                            <li class="list-group-item"><a href="https://www.github.com/christianrawley" class="link-body-emphasis text-decoration-none" target="_blank"><i class="bi bi-github me-2"></i>GitHub</a></li>
+                            <li class="list-group-item"><a href="https://www.linkedin.com/in/christian-rawley" class="link-body-emphasis text-decoration-none" target="_blank"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Education
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title">University of Arkansas - Fort Smith</h5>
+                            <p class="m-0 mb-1 text-muted"><i>Bachelor of Science in Computer Science</i></p>
+                            <p class="m-0">Concentration in Data Science & AI</p>
+                            <p class="m-0">Minor in Mathematics</p>
+                            <p class="m-0">Expected Graduation: May 2027</p>
+                            <p class="m-0">Cumulative GPA: 4.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg p-2">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Work Experience
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <h6 class="mt-1 mb-0">Full-Stack Developer Intern</h6>
+                                <small class="text-muted">Simmons Foods · Summer 2025 · Rogers, AR</small>
+                                <p class="mt-1 mb-1">
+                                    Current intern at Simmons Foods, working on a team to develop and maintain internal applications. My role involves both front-end and back-end development, focusing on improving user experience and application performance.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+                        <div class="col">
+                            <div class="card">
+                                <img src="vibe.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Virtual Interactive Book Engine</h5>
+                                    <p class="card-text">Visual novel engine with a custom DSL that makes writing visual novels fast and easy.</p>
+                                    <a href="https://github.com/ChristianRawley/VIBE" class="btn btn-success" target="_blank">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="BulletRushGif.gif" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bullet Rush</h5>
+                                    <p class="card-text">A fast-paced 2D bullet hell game designed with a team of three.</p>
+                                    <a href="https://github.com/ChristianRawley/BulletRush" class="btn btn-success" target="_blank">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="numa.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">My Numa</h5>
+                                    <p class="card-text">Mobile app that centralizes university resources using a custom-built RESTful API.</p>
+                                    <a href="https://github.com/ChristianRawley/MyNuma/releases/tag/0.0.1-alpha" class="btn btn-success" target="_blank">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h3>A fast-paced 2D bullet hell developed as a team project for Foundations of Programming II. Built using Java Swing, the game features randomly generated bullets, player movement, collision detection, and basic UI elements. I collaborated on game logic, rendering, and code structure while applying object-oriented programming principles.</p>
-            <a href="https://github.com/ChristianRawley/BulletRush" target="_blank">View Project</a>
         </div>
-        <div class="entry">
-            <h2>My Numa</h2>
-            <div class="tags">
-                <p>React Native</p>
-                <p>TypeScript</p>
-                <p>Node</p>
-                <p>Express</p>
+        </main>
+    </body>
+    <footer class="bg-secondary-subtle">
+        <div class="container p-3">
+            <div class="row">
+                <div class="col-md-6 text-md-start text-center">
+                    <small class="text-secondary-subtle">&copy; 2025 Christian Rawley. All rights reserved.</small>
+                </div>
             </div>
-            <h3>Built a React Native app that centralizes university resources using a custom-built RESTful API. Added course sorting and filtering for easier navigation of university data. Integrated dynamically scraped campus info for dining, courses, events, and services.</p>
-            <a href="https://github.com/ChristianRawley/MyNuma/releases/tag/0.0.1-alpha" target="_blank">View Project</a>
         </div>
-        <div class="entry">
-            <h2>Visual Interactive Book Engine</h2>
-            <div class="tags">
-                <p>Java</p>
-                <p>Java Swing</p>
-            </div>
-            <h3>Constructed a library that enables developers to efficiently create interactive books with support for input, audio, visuals, and text. Simplified multimedia integration for seamless and engaging storytelling. Designed user-friendly methods to make development more accessible and efficient.</p>
-            <a href="https://github.com/ChristianRawley/VIBE" target="_blank">View Project</a>
-        </div>
-        <div class="entry">
-            <h2>Resist the Unknown</h2>
-            <div class="tags">
-                <p>Unity</p>
-                <p>C#</p>
-                <p>GameSalad</p>
-            </div>
-            <h3>Rebuilt my award-winning video game transitioning from GameSalad to enhance gameplay and user experience by implementing a dynamic tower placement system and resolving numerous legacy bugs.</p>
-            <a href="https://gamesalad.com/featured-student-games/resist-the-unknown/" target="_blank">View Project</a>
-        </div>
-    </div>
-</body>
+    </footer>
 </html>
