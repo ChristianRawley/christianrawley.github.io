@@ -169,3 +169,25 @@ function renderProjects(projects) {
         container.appendChild(col);
     });
 }
+
+// Prism.js syntax highlighting theme switcher
+const lightTheme = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css";
+    const darkTheme = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.css";
+
+    function updatePrismTheme() {
+        const htmlEl = document.documentElement;
+        const currentTheme = htmlEl.getAttribute("data-bs-theme") || "light";
+        const themeLink = document.getElementById("prism-theme");
+
+        if (themeLink) {
+            themeLink.href = currentTheme === "dark" ? darkTheme : lightTheme;
+        }
+    }
+
+    updatePrismTheme();
+
+    const observer = new MutationObserver(updatePrismTheme);
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["data-bs-theme"]
+    });
