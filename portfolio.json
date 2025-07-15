@@ -1,0 +1,81 @@
+{
+  "bio": {
+    "name": "Christian Rawley",
+    "about": "Hi, I’m Christian Rawley, a computer science student at UAFS. I’m interested in artificial intelligence and building applications. I enjoy seeing my code come together into a working program, and it's a passion of mine to build important tools for people that scale and make a lasting impact."
+  },
+  "contact": [
+    {
+      "label": "christian@cerawley.com",
+      "icon": "bi-envelope",
+      "href": "mailto:christian@cerawley.com"
+    },
+    {
+      "label": "crawle00@uafs.edu",
+      "icon": "bi-envelope",
+      "href": "mailto:crawle00@uafs.edu"
+    },
+    {
+      "label": "GitHub",
+      "icon": "bi-github",
+      "href": "https://www.github.com/christianrawley"
+    },
+    {
+      "label": "LinkedIn",
+      "icon": "bi-linkedin",
+      "href": "https://www.linkedin.com/in/christian-rawley"
+    }
+  ],
+  "education": {
+    "school": "University of Arkansas - Fort Smith",
+    "degree": "Bachelor of Science in Computer Science",
+    "details": [
+      "Concentration in Data Science & AI",
+      "Minor in Mathematics",
+      "Expected Graduation: May 2027",
+      "Cumulative GPA: 4.0"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Software Engineer II Intern",
+      "company": "Walmart",
+      "location": "Bentonville, AR",
+      "duration": "Summer 2026",
+      "description": "Incoming software engineer intern at Walmart Global Tech for Summer 2026."
+    },
+    {
+      "title": "Information Technology Support Assistant",
+      "company": "UAFS",
+      "location": "Fort Smith, AR",
+      "duration": "Aug 2025 — Present",
+      "description": ""
+    },
+    {
+      "title": "Full-Stack Developer Intern",
+      "company": "Simmons Foods",
+      "location": "Rogers, AR",
+      "duration": "Summer 2025",
+      "description": ""
+    }
+  ],
+  "projects": [
+    {
+      "title": "Vibe Engine",
+      "description": "Visual novel engine with a custom DSL that makes writing visual novels fast and easy.",
+      "image": "src/vibe.png",
+      "link": "https://github.com/ChristianRawley/VIBE"
+    },
+    {
+      "title": "Bullet Rush",
+      "description": "A fast-paced 2D bullet hell game designed with a team of three.",
+      "image": "src/BulletRushGif.gif",
+      "link": "https://github.com/ChristianRawley/BulletRush"
+    },
+    {
+      "title": "My Numa",
+      "description": "Mobile app that centralizes university resources using a custom-built RESTful API.",
+      "image": "src/numa.jpg",
+      "link": "https://github.com/ChristianRawley/MyNuma/releases/tag/0.0.1-alpha"
+    }
+  ]
+}
