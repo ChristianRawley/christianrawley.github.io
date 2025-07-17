@@ -11,3 +11,13 @@ body {
 main {
     flex: 1;
 }
+
+.table.bg-match,
+.table.bg-match thead,
+.table.bg-match tbody,
+.table.bg-match tr,
+.table.bg-match th,
+.table.bg-match td {
+    background-color: inherit !important;
+    border-color: var(--bs-border-color);
+}
