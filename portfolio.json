@@ -55,7 +55,8 @@
       "company": "Simmons Foods",
       "location": "Rogers, AR",
       "duration": "Summer 2025",
-      "description": ""
+      "description": "Rewrote the employee apparel site on a modern stack for better security and maintainability. Improved the Sign-In Kiosk app with mobile check-ins, drastically reducing wait times, especially for group events.",
+      "skills": ["Django", "Bootstrap", "Javascript", "HTML/CSS"]
     }
   ],
   "projects": [
@@ -63,19 +64,22 @@
       "title": "Vibe Engine",
       "description": "Visual novel engine with a custom DSL that makes writing visual novels fast and easy.",
       "image": "src/vibe.png",
-      "link": "https://github.com/ChristianRawley/VIBE"
+      "link": "https://github.com/ChristianRawley/VIBE",
+      "skills": ["Java", "Java Swing", "JavaFX"]
     },
     {
       "title": "Bullet Rush",
       "description": "A fast-paced 2D bullet hell game designed with a team of three.",
       "image": "src/BulletRushGif.gif",
-      "link": "https://github.com/ChristianRawley/BulletRush"
+      "link": "https://github.com/ChristianRawley/BulletRush",
+      "skills": ["Java", "Java Swing"]
     },
     {
       "title": "My Numa",
       "description": "Mobile app that centralizes university resources using a custom-built RESTful API.",
       "image": "src/numa.jpg",
-      "link": "https://github.com/ChristianRawley/MyNuma/releases/tag/0.0.1-alpha"
+      "link": "https://github.com/ChristianRawley/MyNuma/releases/tag/0.0.1-alpha",
+      "skills": ["React Native", "Node.js", "Express"]
     }
   ]
 }

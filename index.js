@@ -92,7 +92,6 @@ fetch('portfolio.json').then(res => res.json()).then(data => {
     renderProjects(data.projects);
 });
 
-// Render bio card
 function renderBio(bio) {
     document.getElementById('bio-card').innerHTML = `
         <div class="card">
@@ -105,7 +104,6 @@ function renderBio(bio) {
     `;
 }
 
-// Render contact list
 function renderContact(contacts) {
     const contactItems = contacts.map(contact => `
         <li class="list-group-item">
@@ -121,9 +119,8 @@ function renderContact(contacts) {
     `;
 }
 
-// Render education
 function renderEducation(edu) {
-    const details = edu.details.map(d => `<p class="m-0">${d}</p>`).join('');
+    const details = edu.details.map(d => `<p class="m-0 mt-2">${d}</p>`).join('');
     document.getElementById('education-card').innerHTML = `
         <div class="card-header">Education</div>
         <div class="card-body p-3">
@@ -134,15 +131,21 @@ function renderEducation(edu) {
     `;
 }
 
-// Render experience
 function renderExperience(experiences) {
-    const items = experiences.map(exp => `
-        <li class="list-group-item">
-            <h6 class="mt-1 mb-0">${exp.title}</h6>
-            <small class="text-muted">${exp.company} · ${exp.duration} · ${exp.location}</small>
-            <p class="mt-1 mb-1">${exp.description}</p>
-        </li>
-    `).join('');
+    const items = experiences.map(exp => {
+        const skills = exp.skills && exp.skills.length
+            ? exp.skills.map(skill => `<span class="badge alert alert-secondary py-1 px-2 small mb-0 d-inline-block rounded-pill me-1">${skill}</span>`).join('')
+            : '';
+
+        return `
+            <li class="list-group-item">
+                <h6 class="mt-1 mb-0">${exp.title}</h6>
+                <small class="text-muted">${exp.company} · ${exp.duration} · ${exp.location}</small>
+                <p class="mt-1 mb-1">${exp.description}</p>
+                ${skills}
+            </li>
+        `;
+    }).join('');
 
     document.getElementById('experience-card').innerHTML = `
         <div class="card-header">Relevant Work Experience</div>
@@ -150,10 +153,14 @@ function renderExperience(experiences) {
     `;
 }
 
-// Render projects
+
 function renderProjects(projects) {
     const container = document.getElementById('projects-container');
+    container.innerHTML = '';
     projects.forEach(project => {
+        const skills = project.skills && project.skills.length
+            ? project.skills.map(skill => `<span class="badge alert alert-secondary py-1 px-2 small mb-0 d-inline-block rounded-pill me-1">${skill}</span>`).join('')
+            : '';
         const col = document.createElement('div');
         col.className = 'col';
         col.innerHTML = `
@@ -161,8 +168,11 @@ function renderProjects(projects) {
                 <img src="${project.image}" class="card-img-top" alt="">
                 <div class="card-body">
                     <h5 class="card-title">${project.title}</h5>
-                    <p class="card-text">${project.description}</p>
-                    <a href="${project.link}" class="btn btn-success" target="_blank">GitHub</a>
+                    ${skills}
+                    <p class="card-text mt-2">${project.description}</p>
+                    <div class="mt-2">
+                        <a href="${project.link}" class="btn btn-success" target="_blank">GitHub</a>
+                    </div>
                 </div>
             </div>
         `;
@@ -173,7 +183,6 @@ function renderProjects(projects) {
 // Prism.js syntax highlighting theme switcher
 const lightTheme = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css";
     const darkTheme = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.css";
-
     function updatePrismTheme() {
         const htmlEl = document.documentElement;
         const currentTheme = htmlEl.getAttribute("data-bs-theme") || "light";
@@ -183,9 +192,7 @@ const lightTheme = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css
             themeLink.href = currentTheme === "dark" ? darkTheme : lightTheme;
         }
     }
-
     updatePrismTheme();
-
     const observer = new MutationObserver(updatePrismTheme);
     observer.observe(document.documentElement, {
         attributes: true,
