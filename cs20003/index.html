@@ -12,126 +12,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="bg-body-tertiary">
-    <main class="container-fluid">
-        <div class="row p-2">
-            <div class="col-12 col-lg-3 p-2">
-                <div class="card d-none d-lg-block">
-                    <div class="card-header">Data Structures</div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Course Introduction</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Inheritance and Polymorphism</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Interfaces, Iterators and Abstract Classes	</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Algorithm Analysis</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Recursion</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Searching</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Linked Lists</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Stacks and Queues</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Hash Tables</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Trees and Heaps</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Binary Search Trees</a></li>
-                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Graphs</a></li>
-                    </ul>
-                </div>
-                <div class="d-lg-none mb-3">
-                    <div class="accordion" id="mobileWeekAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="mobileWeekHeading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileWeekCollapse" aria-expanded="false" aria-controls="mobileWeekCollapse">Select Week</button>
-                            </h2>
-                            <div id="mobileWeekCollapse" class="accordion-collapse collapse"
-                                aria-labelledby="mobileWeekHeading">
-                                <div class="accordion-body p-0">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Course Introduction</a> </li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Inheritance and Polymorphism</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Interfaces, Iterators and Abstract Classes	</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Algorithm Analysis</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Recursion</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Searching</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Linked Lists</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Stacks and Queues</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Hash Tables</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Trees and Heaps</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Binary Search Trees</a></li>
-                                        <li class="list-group-item"><a href="#" class="text-decoration-none link-body-emphasis">Graphs</a></li>
-                                    </ul>
-                                    <div class="p-1"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <nav class="navbar navbar-expand-lg sticky-top bg-secondary-subtle">
+        <div class="container-fluid px-3 p-2">
+            <a class="navbar-brand" href="#">Data Structures Notes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="#">Foundations</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Recursion & Searching</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Data Structures</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Advanced</a>
                 </div>
             </div>
-            <div class="col-12 col-lg p-2 pt-0">
-                <h1 class="mb-4">Course Introduction</h1>
-                <section class="mb-4">
-                    <h4>Overview</h4>
-                    <p>This is a placeholder section to test various content types like code blocks, tables, alerts, and formatting elements.</p>
-                </section>
-
-                <section class="mb-4">
-                    <h4>Sample Code Block</h4>
-                    <pre><code class="language-java">// Java example
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, world!");
-    }
-}</code></pre>
-                </section>
-                <section class="mb-4">
-                    <h4>Inline Code</h4>
-                    <p>Use <code>ArrayList&lt;String&gt;</code> for dynamic arrays and <code>HashMap&lt;K, V&gt;</code> for key-value storage.</p>
-                </section>
-                <section class="mb-4">
-                    <h4>Comparison Table</h4>
-                    <div class="table-responsive">
-                        <table class="table bg-match table-hover">
-                            <thead>
-                                <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-group-divider">
-                                <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                </tr>
-                                <tr>
-                                <th scope="row">3</th>
-                                <td>John</td>
-                                <td>Doe</td>
-                                <td>@social</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-                <section class="mb-4">
-                    <h4>Bootstrap Alert</h4>
-                    <div class="alert alert-info" role="alert">
-                        <i class="bi bi-info-circle-fill"></i> This is an informational message to test callouts in notes.
-                    </div>
-                </section>
-                <section class="mb-4">
-                    <h4>List Test</h4>
-                    <ul>
-                        <li>Read the syllabus</li>
-                        <li>Set up your environment</li>
-                        <li>Join the class discussion group</li>
-                    </ul>
-                </section>
-            </div>
+        </div>
+    </nav>
+    <main class="container-lg">
+        <div class="g-5 pt-3">
+            <h1>Let's go back to the basics.</h1>
+            <p>Dr. Mackey begins the first lecture describing how Java works under the hood, in an easy-to-understand high-level way. You start with <b>compiling</b> your .java source code using <code>javac &lt;FileName&gt;.java</code>. We can remember what this does because the "c" in javac stands for compile. The compiler then converts the java source code into <b>machine code</b>, or byte code, where a new .class file is generated. This machine code is then able to be ran with <code>java &lt;FileName&gt;</code>. This code is running in Java's <b>Java Virtual Machine</b> (JVM), which is important because there are many different CPUs with many different architectures. With JVM, our code is platform-independent and can be run nearly anywhere.</p>
+            <img src="/cs20003/doodle1.png" class="rounded img-fluid" alt="...">
+            <p class="mt-2">Pardon my poor handwriting and sloppy drawings. Going forward, let's pretend that it is legible and you perfectly understand what I am trying to convey.</p>
+            <h3>Classes vs Objects</h3>
+            <p>What is the difference between a class and an object? A <b>class</b> can be defined as a blueprint of states (memory, variables) and behaviors (methods/constructors). An <b>object</b> is an instance of a class.</p>
+            <p>Speaking of states/variables, there are two types.</p>
+            <ol>
+                <li>Primitive types: int, double, float, char, long, short, byte, and boolean</li>
+                <li>Reference types: everything else, such as Strings, arrays, or other objects</li>
+            </ol>
         </div>
     </main>
     <script src="../index.js"></script>
