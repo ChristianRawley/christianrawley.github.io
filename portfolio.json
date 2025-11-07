@@ -41,14 +41,16 @@
       "company": "Walmart",
       "location": "Bentonville, AR",
       "duration": "Summer 2026",
-      "description": "Incoming software engineer intern at Walmart Global Tech for Summer 2026."
+      "description": "Incoming software engineer intern at Walmart Global Tech for Summer 2026.",
+      "skills": ["Patience for this summer to start."]
     },
     {
       "title": "Artificial Intelligence Lab Assistant",
       "company": "UAFS",
       "location": "Fort Smith, AR",
       "duration": "Aug 2025 — Present",
-      "description": ""
+      "description": "Worked with Dr. Andrew Makckey on a number of things, such as programming, research, technical setup, and tutoring and class recitations.",
+      "skills": ["Python", "PyTorch", "Linux"]
     },
     {
       "title": "Full-Stack Developer Intern",
