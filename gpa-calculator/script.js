@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ---- Add Row ----
     document.addEventListener("click", function (e) {
         if (e.target && e.target.matches(".btn.btn-dark.mb-2")) {
             const groupDiv = e.target.closest(".bg-light");
@@ -19,12 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ---- Add Group ----
     document.querySelector(".btn.btn-light.me-3").addEventListener("click", () => {
         const firstGroup = document.querySelector(".bg-light");
         const newGroup = firstGroup.cloneNode(true);
 
-        // reset inputs
         newGroup.querySelector("input[aria-label='Weight']").value = "";
         newGroup.querySelector("tbody").innerHTML = `
             <tr>
@@ -38,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         firstGroup.parentNode.insertBefore(newGroup, firstGroup.nextSibling);
     });
 
-    // ---- Calculate ----
+    // Calculate
     document.querySelector(".btn.btn-primary").addEventListener("click", () => {
         const groups = document.querySelectorAll(".bg-light");
 
@@ -70,3 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
