@@ -1,4 +1,3 @@
 [
-{"title":"Unit 1: Introduction","description":"Understand how to use the app and its basic philosophies","manifest":"u1/manifest.json"},
-{"title":"something else","description":"h","manifest":"h"}
+{"title":"Unit 1: Introduction","description":"Understand how to use the app and its basic philosophies","page":"example-grammar-point.json"},
 ]
