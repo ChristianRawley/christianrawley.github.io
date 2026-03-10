@@ -1,0 +1,225 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake
+% % License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+%\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+%change from 0.15in to 0.0in
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Christian Rawley} \\ \vspace{1pt}
+    \small 479-285-8753 $|$ \href{mailto:christian@cerawley.com}{\underline{christian@cerawley.com}} $|$ 
+    \href{https://linkedin.com/in/ChristianRawley}{\underline{linkedin.com/in/ChristianRawley}} $|$
+    \href{https://github.com/ChristianRawley}{\underline{github.com/ChristianRawley}} $|$
+    \href{https://www.cerawley.com}{\underline{cerawley.com}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Arkansas at Fort Smith}{Fort Smith, AR}
+      {Bachelor of Science in Computer Science, Minor in Mathematics $|$ GPA: 4.0/4.0}{Anticipated May 2027}
+        \resumeItem{Coursework: Artificial Intelligence, Distributed Systems, Information Retrieval, Enterprise Computing, Database Systems}
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.0in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, C/C++, SQL (PostgreSQL), JavaScript/TypeScript (NodeJS), HTML/CSS, Bash, PHP} \\
+     \textbf{Technologies}{: React, Node.js, Django Flask, JUnit, Spring Boot, Git, Docker, Pandas, PyTorch, MongoDB} 
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+\resumeSubheading
+      {University of Arkansas at Fort Smith}{Fort Smith, AR}
+      {Artificial Intelligence Lab Assistant}{Aug 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Increased research efficiency by developing small, purpose-built Python libraries and scripts to support faculty AI and CS research workflows.}
+        \resumeItem{Supported student success across multiple courses by proctoring exams, tutoring students, and leading recitations, reinforcing core concepts in computer science and artificial intelligence.}
+        \resumeItem{Provided flexible technical and academic support across the department by assisting with various tasks.}
+      \resumeItemListEnd
+
+	\resumeSubheading
+      {Walmart Global Tech}{Bentonville, AR}
+      {Software Engineer II Intern}{Jun 2026 -- Aug 2026}
+      \resumeItemListStart
+        \resumeItem{?}
+        \resumeItem{?}
+        \resumeItem{?}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    
+
+    \resumeSubheading
+      {Simmons Foods}{Rogers, AR}
+      {Full-Stack Developer Intern}{Jun 2025 -- Jul 2025}
+      \resumeItemListStart
+        \resumeItem{Improved application security and maintainability by migrating a legacy PHP employee store to a Django-based stack, implementing MVC patterns, rewriting business logic, and developing models and Bootstrap-based front-end views.}
+        \resumeItem{Increased system reliability by 40\% by diagnosing and resolving intermittent crashes in a production sign-in kiosk through codebase analysis and infrastructure-level fixes.}
+        \resumeItem{Reduced group sign-in time by over 95\% by designing and implementing a secure QR code-based workflow, replacing individual kiosk sign-ins for large guest groups with a constant-time mobile check-in process.}
+      \resumeItemListEnd
+      
+      
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{NumaConnect} $|$ \emph{Node.js, RESTful APIs, React Native, Discord.js, Serverless (Vercel), Git}}{}
+          \resumeItemListStart
+            \resumeItem{Created a serverless API aggregating campus data from multiple sources via scraping and external APIs, streamlining access to dining menus, campus events and organizations, and other university resources.}
+            \resumeItem{Developed two client applications utilizing the API -- a React Native mobile application and Discord bot -- reducing the time to retrieve campus information and enabling cross-platform accessibility.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------VOLUNTEER EXPERIENCE-----------
+\section{Volunteer Experience}
+ \begin{itemize}[leftmargin=0.0in, label={}]
+
+    \resumeSubheading
+      {Academy for Computing and Machinery}{Fort Smith, AR}
+      {Vice President}{2026 -- 2027}
+      \resumeItemListStart
+        \resumeItem{?}
+        \resumeItem{?}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {VEX Robotics}{Bixby, OK}
+      {Judge}{Dec 2025}
+      \resumeItemListStart
+        \resumeItem{Evaluated student projects and presentations according to official scoring criteria at a global event.}
+        \resumeItem{Ensured fair, consistent judging across international teams, contributing to the integrity of the competition.}
+      \resumeItemListEnd
+ \end{itemize}
+
+%
+
+
+
+%-------------------------------------------
+\end{document}
