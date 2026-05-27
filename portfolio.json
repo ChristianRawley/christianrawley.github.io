@@ -29,7 +29,6 @@
     "school": "University of Arkansas - Fort Smith",
     "degree": "Bachelor of Science in Computer Science",
     "details": [
-      "Concentration in Data Science & AI",
       "Minor in Mathematics",
       "Expected Graduation: May 2027",
       "Cumulative GPA: 4.0"
@@ -41,8 +40,8 @@
       "company": "Walmart",
       "location": "Bentonville, AR",
       "duration": "Summer 2026",
-      "description": "Incoming software engineer intern at Walmart Global Tech for Summer 2026.",
-      "skills": ["Patience for this summer to start."]
+      "description": "Supply Chain Technology Team",
+      "skills": ["Java", "Spring Boot"]
     },
     {
       "title": "Artificial Intelligence Lab Assistant",
