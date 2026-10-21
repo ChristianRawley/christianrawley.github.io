@@ -164,6 +164,9 @@ blockquote {
 
 main img, main video { display: block; width: 100%; height: auto; border-radius: 10px; }
 
+main img.zoomable { cursor: zoom-in; }
+main img.zoomable:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
 table { border-collapse: collapse; display: block; overflow-x: auto; max-width: 100%; }
 th, td { padding: 0.4rem 0.9rem; border-bottom: 1px solid var(--line); text-align: left; }
 

@@ -91,6 +91,17 @@ function label(){var to=cur()==='dark'?'light':'dark';b.dataset.to=to;b.title=b.
 b.hidden=false;label();
 b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';r.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(e){}label()})})();`;
 
+const LIGHTBOX = `if(document.querySelector('main img')){
+var imgs=[].filter.call(document.querySelectorAll('main img'),function(i){return!i.closest('a')});
+if(imgs.length){
+imgs.forEach(function(i){i.classList.add('zoomable');i.tabIndex=0;i.setAttribute('role','button');i.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();i.click()}})});
+var l=document.createElement('link');l.rel='stylesheet';l.href='/vendor/photoswipe/photoswipe.css';document.head.appendChild(l);
+var base='/vendor/photoswipe/';
+import(base+'photoswipe-lightbox.esm.min.js').then(function(m){
+var lb=new m.default({gallery:'main',children:'img.zoomable',pswpModule:function(){return import(base+'photoswipe.esm.min.js')},bgOpacity:0.92,wheelToZoom:true,showHideAnimationType:'zoom'});
+lb.addFilter('domItemData',function(d,el){d.src=el.currentSrc||el.src;d.w=+el.getAttribute('width')||el.naturalWidth;d.h=+el.getAttribute('height')||el.naturalHeight;d.alt=el.alt;return d});
+lb.init()})}}`;
+
 const theme = {
   header: (path) => {
     const current = (href) => (href === '/' ? path === '/' : path.startsWith(href));
@@ -152,6 +163,7 @@ ${body}
   ${theme.footer()}
 </div>
 <script>${THEME_TOGGLE}</script>
+<script type="module">${LIGHTBOX}</script>
 </body>
 </html>
 `;
@@ -480,6 +492,10 @@ async function checkLinks() {
 
 await fs.rm(DIRS.out, { recursive: true, force: true });
 await fs.cp(DIRS.static, DIRS.out, { recursive: true });
+const PSWP = 'node_modules/photoswipe/dist';
+for (const f of ['photoswipe.css', 'photoswipe.esm.min.js', 'photoswipe-lightbox.esm.min.js']) {
+  await fs.cp(path.join(PSWP, f), path.join(DIRS.out, 'vendor/photoswipe', f));
+}
 
 const collections = await Promise.all(COLLECTIONS.map(loadCollection));
 for (const c of collections) await writeCollection(c);
