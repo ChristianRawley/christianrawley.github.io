@@ -134,6 +134,7 @@ hr { border: 0; border-top: 1px dashed var(--line); margin: 2.5rem 0; }
   color: var(--text);
   max-width: 100%;
 }
+.project-link svg { width: 1em; height: 1em; flex: none; }
 .project-link a span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .project-link a:hover { border-color: var(--accent); color: var(--accent); }
 .lede { font-size: 1.15em; line-height: 1.6; margin-bottom: 1rem; }

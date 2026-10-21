@@ -74,6 +74,10 @@ const ICONS = {
     '<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
     'moon',
   ),
+  external: icon(
+    '<g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></g>',
+    'external',
+  ),
   email: icon(
     '<rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 6.5 12 13.5l9.5-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
   ),
@@ -165,7 +169,7 @@ ${body}
     if (c.type === 'project') {
       const meta = e.tech.length ? esc(e.tech.join(', ')) : '';
       const link = e.link
-        ? `<p class="project-link"><a target="_blank" rel="noopener" href="${esc(e.link)}"><span>${esc(linkLabel(e.link))}</span><span aria-hidden="true">&nearr;</span></a></p>\n`
+        ? `<p class="project-link"><a target="_blank" rel="noopener" href="${esc(e.link)}"><span>${esc(linkLabel(e.link))}</span>${ICONS.external}</a></p>\n`
         : '';
       return `<p class="crumb"><a href="${c.url}">All ${c.items}</a></p>
 <article>
