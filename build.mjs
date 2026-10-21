@@ -157,21 +157,20 @@ ${body}
     `<ul class="posts">\n${entries
       .map(
         (e) =>
-          `  <li><a href="${e.url}"><span>${esc(e.title)}</span>${timeTag(e.date)}${e.description ? `<small>${esc(e.description)}</small>` : ''}</a></li>`,
+          `  <li><a href="${e.url}"><span>${esc(e.title)}</span>${e.date ? timeTag(e.date) : ''}${e.description ? `<small>${esc(e.description)}</small>` : ''}</a></li>`,
       )
       .join('\n')}\n</ul>`,
 
   entry: (e, c, all, i) => {
     if (c.type === 'project') {
-      const links = [
-        e.repo && `<a rel="noopener" href="${esc(e.repo)}">Source</a>`,
-        e.demo && `<a rel="noopener" href="${esc(e.demo)}">Live demo</a>`,
-      ].filter(Boolean);
-      const meta = [e.tech.length && esc(e.tech.join(', ')), ...links].filter(Boolean);
+      const meta = e.tech.length ? esc(e.tech.join(', ')) : '';
+      const link = e.link
+        ? `<p class="project-link"><a target="_blank" rel="noopener" href="${esc(e.link)}"><span>${esc(linkLabel(e.link))}</span><span aria-hidden="true">&nearr;</span></a></p>\n`
+        : '';
       return `<p class="crumb"><a href="${c.url}">All ${c.items}</a></p>
 <article>
 <h1>${esc(e.title)}</h1>
-${e.description ? `<p class="lede">${esc(e.description)}</p>\n` : ''}${meta.length ? `<p class="meta">${meta.join(' &middot; ')}</p>\n` : ''}${e.html}
+${e.description ? `<p class="lede">${esc(e.description)}</p>\n` : ''}${meta ? `<p class="meta">${meta}</p>\n` : ''}${link}${e.html}
 </article>`;
     }
     const meta = [timeTag(e.date), `${e.minutes} min read`, e.updated && `Updated ${timeTag(e.updated)}`].filter(Boolean);
@@ -211,6 +210,15 @@ const unesc = (s) =>
 
 const fmtDate = (d) =>
   new Date(`${d}T00:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+
+const linkLabel = (url) => {
+  try {
+    const u = new URL(url);
+    return (u.hostname.replace(/^www\./, '') + u.pathname).replace(/\/$/, '');
+  } catch {
+    return url;
+  }
+};
 
 const timeTag = (d) => `<time datetime="${d}">${fmtDate(d)}</time>`;
 
@@ -268,7 +276,7 @@ async function markdown(src) {
       link({ href, title, tokens }) {
         const text = this.parser.parseInline(tokens);
         const external = /^https?:\/\//.test(href) && !href.startsWith(SITE.url);
-        return `<a href="${esc(href)}"${title ? ` title="${esc(title)}"` : ''}${external ? ' rel="noopener"' : ''}>${text}</a>`;
+        return `<a href="${esc(href)}"${title ? ` title="${esc(title)}"` : ''}${external ? ' target="_blank" rel="noopener"' : ''}>${text}</a>`;
       },
     },
     async walkTokens(token) {
@@ -353,24 +361,31 @@ async function loadCollection(c) {
     .filter((e) => DRAFTS || e.meta.draft !== 'true')
     .map((e) => {
       if (!e.meta.title) warnings.push(`${e.file}: missing title`);
-      if (!e.meta.date) warnings.push(`${e.file}: missing date, using today (${built})`);
+      if (c.type === 'project' && e.meta.link && !/^https?:\/\//.test(e.meta.link)) {
+        throw new Error(`${e.file}: link "${e.meta.link}" must start with http:// or https://`);
+      }
+      if (c.type !== 'project' && !e.meta.date) warnings.push(`${e.file}: missing date, using today (${built})`);
       if (!e.meta.description) warnings.push(`${e.file}: missing description, using the first paragraph`);
       return {
         meta: e.meta,
         title: e.meta.title || e.slug,
-        date: checkDate(e.meta.date, e.file, 'date') ?? built,
-        updated: checkDate(e.meta.updated, e.file, 'updated'),
+        date: c.type === 'project' ? undefined : (checkDate(e.meta.date, e.file, 'date') ?? built),
+        updated: c.type === 'project' ? undefined : checkDate(e.meta.updated, e.file, 'updated'),
         description: e.meta.description || excerpt(e.html),
         tech: list(e.meta.tech),
-        repo: e.meta.repo,
-        demo: e.meta.demo,
+        link: e.meta.link,
+        order: Number(e.meta.order) || Infinity,
         url: `${c.url}${e.slug}/`,
         slug: e.slug,
         html: e.html,
         minutes: Math.max(1, Math.round(plainText(e.html).split(' ').length / 220)),
       };
     })
-    .sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
+    .sort((a, b) =>
+      c.type === 'project'
+        ? a.order - b.order || a.title.localeCompare(b.title)
+        : b.date.localeCompare(a.date) || a.title.localeCompare(b.title),
+    );
   return { ...c, entries };
 }
 

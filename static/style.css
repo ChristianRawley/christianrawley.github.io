@@ -103,7 +103,7 @@ h4 { font-size: 1.05rem; margin: 1.6rem 0 0.4rem; }
 .section-head h2 { margin: 0; }
 .section-head a { font-size: 0.9rem; white-space: nowrap; color: var(--muted); }
 .section-head a:hover { color: var(--accent); }
-.crumb { margin: -0.3rem 0 1.1rem; font-family: var(--mono); font-size: 0.85rem; }
+.crumb { margin: -0.3rem 0 0.2rem; font-family: var(--mono); font-size: 0.85rem; }
 .crumb a { display: inline-block; padding: 0.3rem 0; color: var(--muted); }
 .crumb a:hover { color: var(--accent); }
 
@@ -120,6 +120,22 @@ hr { border: 0; border-top: 1px dashed var(--line); margin: 2.5rem 0; }
 .meta { color: var(--muted); font-family: var(--mono); font-size: 0.85rem; margin: 0 0 1.8rem; }
 .meta a { color: inherit; white-space: nowrap; }
 .meta a:hover { color: var(--accent); }
+.project-link { margin: 0 0 1.8rem; }
+.project-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--text);
+  max-width: 100%;
+}
+.project-link a span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.project-link a:hover { border-color: var(--accent); color: var(--accent); }
 .lede { font-size: 1.15em; line-height: 1.6; margin-bottom: 1rem; }
 .home > h1 + p { font-size: 1.15em; line-height: 1.6; }
 @media (max-width: 30rem) {
