@@ -44,11 +44,6 @@ Users designated as admins have exactly one power: the ability to create clubs a
 
 #### Other
 <figure>
-  <img src="/images/projects/crewly/crewly-screenshot-post.png">
+  <img src="/images/projects/crewly/crewly-screenshot-verification.png">
 </figure>
 This project has a few other tiny features. You can check notifications anytime there is a reply to one of your questions, or verify that you actually went and volunteered for an RSO event.
-
-
-## Challenges
-
-## Reflections
