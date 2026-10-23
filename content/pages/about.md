@@ -8,7 +8,7 @@ description: About Christian Rawley, a computer science student focused on data 
   <figcaption>With fellow Walmart interns at an expo. I'm on the far right.</figcaption>
 </figure>
 
-My name is Christian Rawley. I am a computer science student who builds software with a focus on data science and AI, and I will be joining Walmart as a software engineer in the summer of 2027.
+My name is Christian Rawley. I am a computer science student who builds software with a focus on data science and AI.
 
 Outside of code, I enjoy pickleball, ping pong, language learning, philosophy, mathematics, working out, and RPG video games.
 
